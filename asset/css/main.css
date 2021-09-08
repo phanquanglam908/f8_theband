@@ -1,0 +1,485 @@
+/* Reset CSS */
+html {
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+* {
+   margin: 0;
+   padding: 0;
+}
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+   outline: none;
+}
+input {
+   line-height: normal;
+}
+label,
+button {
+   cursor: pointer;
+}
+a {
+   text-decoration: none;
+}
+img {
+   display: block;
+   max-width: 100%;
+}
+:root {
+   --black-color: #000;
+   --red-color: #f44336;
+   --white-color: #fff;
+   --hover-color: #ccc;
+   --modal-color: #009688;
+
+   --body-font: "Lato", sans-serif;
+   --font-size: 15px;
+}
+/* base CSS  */
+.row {
+   padding: 32px 0;
+   display: flex;
+   flex-direction: row;
+}
+
+.small-row {
+   display: flex;
+   margin: 8px 0;
+}
+
+.col {
+   padding: 0 8px;
+}
+
+.col-1 {
+   width: 100%;
+}
+
+.col-3 {
+   width: calc(100% / 3);
+}
+
+.col-2 {
+   width: calc(100% / 2);
+}
+
+.heading_content {
+   width: 100%;
+   text-align: center;
+}
+
+.content_heading {
+   font-family: "Segoe UI", sans-serif;
+   font-weight: 400;
+   margin: 10px 0;
+   font-size: 30px;
+   letter-spacing: 4px;
+}
+
+.content_subheading {
+   opacity: 0.6;
+   margin: 15px;
+}
+
+.text-white {
+   color: var(--white-color) !important;
+}
+
+.btn {
+   padding: 8px 16px;
+   color: var(--white-color);
+   background-color: var(--black-color);
+   border: none;
+   text-transform: uppercase;
+   font-size: var(--font-size);
+   cursor: pointer;
+}
+
+#header .icon-bars:hover,
+.btn:hover {
+   background-color: var(--hover-color);
+   color: var(--black-color);
+}
+
+/* Style CSS */
+.wrapper {
+   font-family: var(--body-font);
+   width: 100%;
+   height: 100%;
+   margin: 0 auto;
+   line-height: 1.5;
+}
+
+.container {
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+#header {
+   height: 46px;
+   background-color: var(--black-color);
+   position: fixed;
+   top: 0;
+   min-width: 100%;
+   z-index: 1;
+}
+
+#header .menu-list {
+   display: inline-block;
+}
+
+#header .menu-list .menu-list_item {
+   display: inline-block;
+   line-height: 46px;
+}
+
+#header .menu-list .menu-list_item .menu-list_link {
+   text-transform: uppercase;
+   font-size: var(--font-size);
+   padding: 0 24px;
+   color: var(--white-color);
+   display: block;
+}
+
+#header .menu-list .menu-list_item:hover .menu-list_link {
+   background-color: var(--hover-color);
+   color: var(--black-color);
+}
+
+#header .menu-list .menu-list_item:nth-child(5) {
+   position: relative;
+}
+
+#header .menu-list .menu-list_item:nth-child(5):hover > .dropdown-menu-list {
+   display: block;
+}
+
+.dropdown-menu-list {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   list-style: none;
+   background-color: var(--white-color);
+   box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.5);
+   min-width: 160px;
+}
+
+.dropdown-menu-list .dropdown-menu-list_item .dropdown-menu-list_link {
+   color: var(--black-color);
+   padding: 8px 16px;
+   display: block;
+   width: 100%;
+}
+.dropdown-menu-list .dropdown-menu-list_item:hover .dropdown-menu-list_link {
+   background-color: var(--hover-color);
+}
+
+#header .icon-search,
+#header .icon-bars {
+   color: var(--white-color);
+   line-height: 46px;
+   padding: 0 24px;
+   cursor: pointer;
+   float: right;
+   font-size: var(--font-size);
+}
+
+#header .icon-bars {
+   display: none;
+   font-size: 20px;
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
+#header .icon-search:hover {
+   background-color: var(--red-color);
+}
+
+.slider {
+   margin-top: 46px;
+   padding-top: 50%;
+   background: url("../img/chicago.jpg") center / cover no-repeat;
+   position: relative;
+}
+
+.slider .slider-content {
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   padding: 32px 16px;
+}
+
+.slider .slider-content .slider-content_title {
+   color: var(--white-color);
+   text-align: center;
+   margin: 25px 0;
+   font-family: "Segoe UI", sans-serif;
+   font-size: 24px;
+}
+
+.slider .slider-content .slider-content_desc {
+   color: var(--white-color);
+   text-align: center;
+   font-size: var(--font-size);
+   font-weight: 700;
+   text-shadow: 0 0 1px #000;
+}
+
+#band {
+   text-align: center;
+   width: 100%;
+   padding: 64px 16px;
+}
+
+#band .band_desc {
+   text-align: justify;
+   margin: 15px 0;
+}
+
+#band .member_img {
+   margin-top: 15px;
+   width: 60%;
+   display: inline-block;
+   border-radius: 4px;
+}
+
+/* Tour & Tickets */
+
+#tour {
+   padding: 64px 16px;
+   background-color: var(--black-color);
+}
+
+.tour .tickets-list {
+   background-color: var(--white-color);
+   list-style: none;
+   border: 1px solid #ccc;
+   color: #757575;
+}
+
+.tour .tickets-list li {
+   padding: 8px 16px;
+   border-bottom: 1px solid #ccc;
+}
+
+.tour .tickets-list .sold-out {
+   background-color: var(--red-color);
+   color: var(--white-color);
+   padding: 3px 4px;
+   margin-left: 16px;
+}
+
+.tour .tickets-list .quanlity {
+   float: right;
+   width: 24px;
+   height: 24px;
+   border-radius: 50%;
+   line-height: 24px;
+   background-color: var(--black-color);
+   text-align: center;
+   color: var(--white-color);
+}
+
+.places-list {
+   margin: 0 -8px;
+}
+
+.place-img {
+   display: inline-block;
+   width: 100%;
+}
+
+.place-img:hover {
+   opacity: 0.6;
+}
+
+.place-info {
+   padding: 8px 16px;
+   background-color: var(--white-color);
+   margin-top: -5px;
+}
+.place-name {
+   font-size: var(--font-size);
+   font-weight: bolder;
+   padding-top: 15px;
+}
+.place-time {
+   opacity: 0.6;
+   margin: 15px 0;
+}
+.place-desc {
+   margin: 15px 0;
+}
+.buy-ticket-btn {
+   margin-bottom: 16px;
+}
+
+.modal {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba(0, 0, 0, 0.4);
+   display: none;
+   justify-content: center;
+   align-items: center;
+   font-family: var(--body-font);
+   transition: all 0.3s ease;
+}
+
+.modal.open {
+   display: flex;
+}
+
+.modal-container {
+   background-color: var(--white-color);
+   min-height: 200px;
+   width: 900px;
+   max-width: calc(100% - 32px);
+   animation: modalSlideDown ease-in 0.6s;
+}
+/* Animation */
+@keyframes modalSlideDown {
+   from {
+      transform: translateY(-100%);
+      opacity: 0;
+   }
+   to {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+.modal-header {
+   text-align: center;
+   padding: 32px 16px;
+   background-color: var(--modal-color);
+   color: var(--white-color);
+   position: relative;
+}
+.btn-cancel {
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 8px 16px;
+   font-size: 24px;
+}
+
+.pay:hover,
+.btn-cancel:hover {
+   background-color: var(--hover-color);
+   color: var(--black-color);
+   cursor: pointer;
+}
+
+.modal-title {
+   font-family: "Segoe UI", sans-serif;
+   font-weight: 400;
+   margin: 10px 0;
+   letter-spacing: 4px;
+   font-size: 30px;
+}
+
+.modal-body {
+   padding: 0 16px;
+}
+
+.modal-body label {
+   display: block;
+   margin: 15px 0;
+   font-size: var(--font-size);
+}
+.modal-input {
+   padding: 8px;
+   border: 1px solid #ccc;
+   display: block;
+   width: 100%;
+   font-size: var(--font-size);
+   font-weight: 500;
+}
+
+.pay {
+   border: none;
+   background-color: var(--modal-color);
+   display: block;
+   width: 100%;
+   padding: 16px;
+   margin: 16px 0;
+   font-size: var(--font-size);
+   text-transform: uppercase;
+   color: var(--white-color);
+}
+
+.need-help {
+   margin: 15px 0;
+   float: right;
+}
+.need-help a {
+   text-decoration: underline;
+}
+
+#contact {
+   width: 100%;
+   padding: 64px 16px;
+}
+
+.contact-info {
+   font-size: 18px;
+}
+.contact-info i[class*="uil"] {
+   width: 30px;
+   display: inline-block;
+}
+.contact-form {
+   font-size: var(--font-size);
+}
+
+.contact-form .input-contact {
+   padding: 10px;
+   border: 1px solid #ccc;
+   width: 100%;
+}
+
+.contact-form .contact-btn {
+   margin-top: 16px;
+   float: right;
+}
+
+.map img {
+   width: 100%;
+}
+
+.footer {
+   padding: 64px 16px;
+   width: 100%;
+   text-align: center;
+}
+.social-media a {
+   color: var(--black-color);
+   font-size: 24px;
+   opacity: 0.6;
+}
+.social-media a:hover {
+   opacity: 0.4;
+}
+
+.footer .copyright {
+   color: var(--black-color);
+   opacity: 0.6;
+   margin: 15px 0;
+}
+.footer .copyright a {
+   color: var(--black-color);
+   text-decoration: underline;
+}
